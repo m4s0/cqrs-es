@@ -1,0 +1,8 @@
+ram:           2048
+cpus:          2
+ipaddress:     10.10.10.10
+name:          cqrs-es
+vagrant:       "/var/vagrant"
+code:          "/var/www"
+hosts:
+  - cqrs-es.dev

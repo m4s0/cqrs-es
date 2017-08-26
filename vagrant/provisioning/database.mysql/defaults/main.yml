@@ -1,0 +1,11 @@
+---
+mysql_user: m4s0
+mysql_password: m4s0
+mysql_db: cqrs
+mysql_root_password: root
+
+mysql_packages:
+  - Percona-Server-server-56
+  - python-pip
+  - python-devel
+  - mysql-devel
