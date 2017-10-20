@@ -9,7 +9,7 @@ doctrine:
         connections:
             default:
                 driver: pdo_sqlite
-                path: "%kernel.cache_dir%.events.sqlite"
+                path: "%kernel.root_dir%/cache/events.sqlite"
 
 broadway:
     event_store:

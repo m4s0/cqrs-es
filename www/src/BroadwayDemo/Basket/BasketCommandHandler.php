@@ -31,6 +31,7 @@ class BasketCommandHandler extends SimpleCommandHandler
 
     public function handleAddProductToBasket(AddProductToBasket $command)
     {
+        /** @var Basket $basket */
         $basket = $this->repository->load($command->getBasketId());
         $basket->addProduct($command->getProductId(), $command->getProductName());
 
@@ -47,6 +48,7 @@ class BasketCommandHandler extends SimpleCommandHandler
 
     public function handleCheckout(Checkout $command)
     {
+        /** @var Basket $basket */
         $basket = $this->repository->load($command->getBasketId());
         $basket->checkout();
 

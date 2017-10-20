@@ -107,17 +107,19 @@ class Basket extends EventSourcedAggregateRoot
             throw new EmptyBasketException('Cannot checkout an empty basket');
         }
 
-        if ($this->hasBeenCheckedOut) {
-            return;
-        }
+                $this->hasBeenCheckedOut = true;
+
+//        if ($this->hasBeenCheckedOut) {
+//            return;
+//        }
 
         $this->apply(
             new BasketCheckedOut($this->basketId, $this->productCountById)
         );
     }
 
-    protected function applyBasketCheckedOut(BasketCheckedOut $event)
-    {
-        $this->hasBeenCheckedOut = true;
-    }
+//    protected function applyBasketCheckedOut(BasketCheckedOut $event)
+//    {
+//        $this->hasBeenCheckedOut = true;
+//    }
 }
