@@ -21,7 +21,6 @@ class AppKernel extends Kernel
     {
         $bundles = array(
             new Broadway\Bundle\BroadwayBundle\BroadwayBundle(),
-            new BroadwayDemoBundle\BroadwayDemoBundle(),
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
         );
